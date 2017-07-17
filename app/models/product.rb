@@ -13,6 +13,11 @@ class Product < ApplicationRecord
   	Product.last.update_attribute(:premium, true)
   end
 
+  def precio_final
+  	descuento = Category.select("descuento").where(id: self.category_id).first.descuento
+  	preciofinal=self.price*descuento
+  end
+
   
 
 end
