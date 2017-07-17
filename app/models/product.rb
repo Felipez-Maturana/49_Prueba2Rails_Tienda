@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 	after_validation :default_premium 
+	scope :premium, -> {where(premium: true)}
+	scope :last_n, -> (n) {limit(n).order("id DESC")}
   belongs_to :category
   validates :price, presence: true
 

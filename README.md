@@ -11,3 +11,7 @@ def self.capsNames
 		c.save
 	end
 end
+
+11.- Hacer el merge a master
+$ git checkout master 
+$ git merge development
