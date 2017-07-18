@@ -26,3 +26,5 @@ c3.products.build(name: "Televisor", price: 1000000).save
 p1 = Product.create!(name: "Hometheater", price: 500000, category_id: c3.id)
 
 p1.destroy
+
+

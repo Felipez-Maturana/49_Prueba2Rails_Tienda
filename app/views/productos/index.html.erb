@@ -1,0 +1,74 @@
+<h1>Productos#index</h1>
+<p>Find me in app/views/productos/index.html.erb</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<form action="#" method="get">
+                <div class="input-group">
+                    <input class="form-control" id="system-search" name="name" placeholder="Search for name" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+            </form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-offset-4 col-md-4">
+			<form action="#" method="get">
+                <div class="input-group">
+                    <input class="form-control" id="system-search-value" name="lessvalue" placeholder="Search for value < x" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+            </form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-offset-4 col-md-4">
+			<form action="#" method="get">
+                <div class="input-group">
+                    <input class="form-control" id="system-search-value" name="greatervalue" placeholder="Search for value > x" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+            </form>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+    	<table class="table table-list-search">
+	        <thead>
+	            <tr>
+	                <th><i>Nombre</i></th>
+                    <th><i>Precio</i></th>
+                    <th><i>Categoría</i></th>
+                    <th><i>Descuento</i></th>
+	                <th><i>Precio final</i></th>
+                    <th><i></i></th>
+	            </tr>
+	        </thead>
+	        <tbody>
+            	<% @productos.each do |product| %>
+		            <tr>
+		                <td><%= product.name %></td>
+		                <td><%= product.price %></td>
+		                <td><%= product.category.name %></td>
+		                <td><%= product.category.descuento %>%</td>
+		                <td><%= product.precio_final %></td>
+		                <td><a style="height: 25px" class="label label-info">Comprar</a></td>
+		            </tr>
+                <% end  %>
+	        </tbody>
+        </table>   
+		</div>
+	</div>
+</div>

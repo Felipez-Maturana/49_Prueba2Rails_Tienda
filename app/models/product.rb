@@ -16,7 +16,12 @@ class Product < ApplicationRecord
 
   def precio_final
   	descuento = Category.select("descuento").where(id: self.category_id).first.descuento
-  	preciofinal=self.price*descuento/100
+  	
+    if descuento >0 
+      preciofinal=self.price*(100 - descuento)/100
+    else
+      preciofinal=self.price
+    end
   end
 
   
