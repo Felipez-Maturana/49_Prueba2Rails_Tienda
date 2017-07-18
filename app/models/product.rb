@@ -5,6 +5,7 @@ class Product < ApplicationRecord
   belongs_to :category
   validates :price, presence: true
 
+
   def default_premium
   	self.premium = false
   end
@@ -15,7 +16,7 @@ class Product < ApplicationRecord
 
   def precio_final
   	descuento = Category.select("descuento").where(id: self.category_id).first.descuento
-  	preciofinal=self.price*descuento
+  	preciofinal=self.price*descuento/100
   end
 
   
