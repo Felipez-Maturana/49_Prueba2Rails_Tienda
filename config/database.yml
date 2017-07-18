@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: tienda_production
-  username: tienda
-  password: <%= ENV['TIENDA_DATABASE_PASSWORD'] %>
+  database: d8rsp6fnbejpg7
+  username: pbonlmtdvxtmrm
+  password: bc97ab7d0c6ed07266b6c36a4ba626eabbe58de3b50829447296980aad5d756d
