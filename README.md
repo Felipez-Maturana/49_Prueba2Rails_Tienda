@@ -1,3 +1,6 @@
+http://tienda1.herokuapp.com/
+
+
 1.2 git checkout -b development 
 
 7.4 Tomar el último producto, actualizarlo a premium.
